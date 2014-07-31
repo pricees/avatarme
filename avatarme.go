@@ -1,7 +1,7 @@
 package avatar
 
 import (
-	"crypto/sha512"
+	"crypto/md5"
 	"fmt"
 	"io"
 	"strings"
@@ -27,7 +27,7 @@ func (a *Avatar) hashMessage() string {
 }
 
 func (a *Avatar) createHash() string {
-	h := sha512.New()
+	h := md5.New()
 
 	io.WriteString(h, a.hashMessage())
 	return fmt.Sprintf("%x", h.Sum(nil))
