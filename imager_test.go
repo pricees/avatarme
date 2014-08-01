@@ -5,7 +5,7 @@ import "testing"
 func TestIdenticonCreate(t *testing.T) {
 	var identicon = Identicon{
 		avatar:          Avatar{emailAddress: "john@example.net"},
-		filename:        "foo.png",
+		filename:        "",
 		borderSize:      15,
 		squareSize:      25,
 		gridSize:        7,
